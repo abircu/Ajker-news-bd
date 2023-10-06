@@ -2,12 +2,9 @@ import React from "react";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { Link } from "react-router-dom";
 
-const Login = () => {
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const email = e.target.email.value;
-    const password = e.target.password.value;
-    console.log(email, password);
+const Register = () => {
+  const handleRegister = (e) => {
+    e.prventDefault();
   };
   return (
     <div>
@@ -17,9 +14,33 @@ const Login = () => {
           Login your account
         </h1>
         <form
-          onSubmit={handleLogin}
+          onSubmit={handleRegister}
           className="w-full md:w-3/4 lg:w-1/2 mx-auto p-4 md:p-10  border-t-2 "
         >
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Your Name</span>
+            </label>
+            <input
+              type="Text"
+              name="name"
+              placeholder="Your name"
+              className="input input-bordered bg-gray-100"
+              required
+            />
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text">Photo URL</span>
+            </label>
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              className="input input-bordered bg-gray-100"
+              required
+            />
+          </div>
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -43,22 +64,19 @@ const Login = () => {
               className="input input-bordered bg-gray-100"
               required
             />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
           </div>
+          <input type="checkbox" name="cheakbox" id="" placeholder="accept" />
           <div className="form-control mt-6">
             <button className="btn btn-primary text-white bg-slate-950">
-              Login
+              Register
             </button>
           </div>
         </form>
         <p className="font-semibold text-sm text-center">
-          Do not Have An Account ?{" "}
-          <span className=" text-red-500">
-            <Link to="/register">Register</Link>
+          Already have an account ?{" "}
+          <span className=" text-blue-500">
+            {" "}
+            <Link to="/login">Login</Link>
           </span>
         </p>
       </div>
@@ -66,4 +84,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

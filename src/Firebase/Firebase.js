@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB4SSNsXAS8sfymIv-z_gTJb-rKcMxsMH8",
-  authDomain: "ajker-news-bd.firebaseapp.com",
-  projectId: "ajker-news-bd",
-  storageBucket: "ajker-news-bd.appspot.com",
-  messagingSenderId: "230429198651",
-  appId: "1:230429198651:web:6f6549dc34c8087d6d4f1e",
+  apiKey: "AIzaSyC5Kg1DuMpmQrorNA0Wd0kM1HYhNBWq_lA",
+  authDomain: "ajker-news-bd-dff4f.firebaseapp.com",
+  projectId: "ajker-news-bd-dff4f",
+  storageBucket: "ajker-news-bd-dff4f.appspot.com",
+  messagingSenderId: "398821606771",
+  appId: "1:398821606771:web:cad187294717c63a043106"
 };
 
 // Initialize Firebase
