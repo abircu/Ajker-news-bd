@@ -23,6 +23,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    // new project
   );
 };
 
