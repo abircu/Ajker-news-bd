@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../../Shared/Navbar/Navbar";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Register = () => {
+  const { createUser } = useContext(AuthContext);
   const handleRegister = (e) => {
-    e.prventDefault();
+    e.preventDefault();
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email");
+    const password = form.get("password");
+    const name = form.get("name");
+    const photo = form.get("photo");
+    console.log(name, photo, email, password);
+    // Create user
+    createUser(email, password)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
   return (
     <div>
@@ -35,7 +51,7 @@ const Register = () => {
             </label>
             <input
               type="password"
-              name="password"
+              name="photo"
               placeholder="Password"
               className="input input-bordered bg-gray-100"
               required
